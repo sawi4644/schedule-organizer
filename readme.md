@@ -5,13 +5,11 @@
 Created a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 # Library Utilized 
-[Moment.js](https://momentjs.com/) used to work with dates and times. `Moment.js` 
+ * [Day.js](https://day.js.org/)
 <br>
 Other libraries:
 
   * [Luxon](https://moment.github.io/luxon/)
-
-  * [Day.js](https://day.js.org/)
 
   * [date-fns](https://date-fns.org/)
 
