@@ -47,6 +47,22 @@ $('#oneBtn').on('click',function(e){
     localStorage.setItem('one', userInput);
 })
 $('#oneText').val(localStorage.getItem('one'));
+
+// working function for text storage at two
+$('#twoBtn').on('click',function(e){
+    var userInput= $('#twoText').val();
+    e.preventDefault();
+    localStorage.setItem('two', userInput);
+})
+$('#twoText').val(localStorage.getItem('two'));
+
+// working function for text storage at one
+$('#threeBtn').on('click',function(e){
+    var userInput= $('#threeText').val();
+    e.preventDefault();
+    localStorage.setItem('three', userInput);
+})
+$('#threeText').val(localStorage.getItem('three'));
 // color changing blocks based on time
 // if time is current then .present
 // if time is past then .past
