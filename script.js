@@ -56,13 +56,31 @@ $('#twoBtn').on('click',function(e){
 })
 $('#twoText').val(localStorage.getItem('two'));
 
-// working function for text storage at one
+// working function for text storage at three
 $('#threeBtn').on('click',function(e){
     var userInput= $('#threeText').val();
     e.preventDefault();
     localStorage.setItem('three', userInput);
 })
 $('#threeText').val(localStorage.getItem('three'));
+
+// working function for text storage at four
+$('#fourBtn').on('click',function(e){
+    var userInput= $('#fourText').val();
+    e.preventDefault();
+    localStorage.setItem('four', userInput);
+})
+$('#fourText').val(localStorage.getItem('four'));
+
+// working function for text storage at five
+$('#fiveBtn').on('click',function(e){
+    var userInput= $('#fiveText').val();
+    e.preventDefault();
+    localStorage.setItem('five', userInput);
+})
+$('#fiveText').val(localStorage.getItem('five'));
+
+
 // color changing blocks based on time
 // if time is current then .present
 // if time is past then .past
