@@ -71,7 +71,8 @@ body {
   }
 
   .col-8{
-      background-color:lightblue;
+      background-color:lightgrey;
       border-radius: 5px;
+      margin: 2px;
   }
   
