@@ -88,8 +88,10 @@ $('#sevenText').val(localStorage.getItem('seven'));
 
 // color changing blocks based on time
 function presentTime() {
-//   document.getElementById(currentHour)
-`#${currentHour}`
+//   document.getElementById(currentHour).style.backgroundColor ="#FF6961"
+//   document.getElementById(currentHour).classList.add('present') 
+
+$(`#${currentHour}`).addClass('present')
 
 }
 presentTime();

@@ -50,6 +50,8 @@ body {
   .present {
     background-color: #8b61ff;
     color: white;
+    border-radius: 10px;
+    
   }
   
   .future {
@@ -71,7 +73,7 @@ body {
   }
 
   .col-8{
-      background-color:lightgrey;
+      /* background-color:lightgrey; */
       border: dotted;
       border-radius: 5px;
       margin: 2px;
