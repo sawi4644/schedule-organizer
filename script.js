@@ -2,7 +2,15 @@
 var currentDay = moment().format('LL');
 var currentTime = moment().format('LT');
 var currentHour = currentTime.split(':')[0]
-var allHours = ['9', '10', '11', '12', '1', '2', '3', '4', '5', '7']
+var allHours = ['9', '10', '11', '12', '1', '2', '3', '4', '5', '6']
+
+var futureHours = allHours.slice(allHours.indexOf(currentHour),allHours.length-1)
+
+var pastHours = allHours.slice(0, allHours.indexOf(currentHour)) 
+
+console.log(pastHours)
+console.log(futureHours)
+console.log(allHours.indexOf(currentHour))
 console.log(currentHour)
 console.log('time', currentTime,)
 
@@ -78,42 +86,38 @@ $('#fiveBtn').on('click', function (e) {
 })
 $('#fiveText').val(localStorage.getItem('five'));
 
-$('#sevenBtn').on('click', function (e) {
-    var userInput = $('#sevenText').val();
+$('#sixBtn').on('click', function (e) {
+    var userInput = $('#sixText').val();
     e.preventDefault();
     localStorage.setItem('seven', userInput);
 })
-$('#sevenText').val(localStorage.getItem('seven'));
+$('#sixText').val(localStorage.getItem('six'));
 
 
-// color changing blocks based on time
-function presentTime() {
-//   document.getElementById(currentHour).style.backgroundColor ="#FF6961"
-//   document.getElementById(currentHour).classList.add('present') 
+// function futureTime() {
+// $(`#${currentHour}`).split(',')[i+1].addClass('future')
+// }
+// futureTime();
 
-$(`#${currentHour}`).addClass('present')
 
+function timeColor() {
+    for(i = 0; i < allHours.length; i++){
+        if(allHours[i]===currentHour){
+            //all hours [i]= current time
+            $("#"+ allHours[i]).addClass('present')
+        }
+        else if(futureHours.includes(allHours[i])){
+            // all hours [i] is in future array 
+            $('#'+ allHours[i]).addClass('future')
+        }
+        else if(pastHours.includes(allHours[i])){
+            //all hours [i] in past array 
+            $('#' + allHours[i]).addClass('past')
+        }
+    };
 }
-presentTime();
+timeColor();
 
-
-
-
-
-// Color changing on hour
-// function nineColor() {
-//     var startDay = moment().startOf('day');
-//     if (currentTime.isAfter(startDay)) {
-//         $('#nineText').addClass("past");
-//     }
-//     else if (currentTime.isBefore(startDay)) {
-//         $('#nineText').addClass("future");
-//     }
-//     else if (currentTime.isSame(startDay)) {
-//         $('#nineText').addClass("present");
-//     }
-// };
-// nineColor();
 
 
 
