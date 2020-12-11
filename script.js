@@ -2,7 +2,7 @@
 var currentDay = moment().format('LL');
 var currentTime = moment().format('LT');
 var currentHour = currentTime.split(':')[0]
-var allHours = ['9', '10', '11', '12', '1', '2', '3', '4', '5']
+var allHours = ['9', '10', '11', '12', '1', '2', '3', '4', '5', '7']
 console.log(currentHour)
 console.log('time', currentTime,)
 
@@ -78,28 +78,40 @@ $('#fiveBtn').on('click', function (e) {
 })
 $('#fiveText').val(localStorage.getItem('five'));
 
-
-// code for time updates with colors
-function nineColor() {
-    var startDay = moment().startOf('day');
-    if (currentTime.isAfter(startDay)) {
-        $('#nineText').addClass("past");
-    }
-    else if (currentTime.isBefore(startDay)) {
-        $('#nineText').addClass("future");
-    }
-    else if (currentTime.isSame(startDay)) {
-        $('#nineText').addClass("present");
-    }
-};
-nineColor();
+$('#sevenBtn').on('click', function (e) {
+    var userInput = $('#sevenText').val();
+    e.preventDefault();
+    localStorage.setItem('seven', userInput);
+})
+$('#sevenText').val(localStorage.getItem('seven'));
 
 
 // color changing blocks based on time
 function presentTime() {
+//   document.getElementById(currentHour)
+`#${currentHour}`
 
 }
+presentTime();
 
+
+
+
+
+// Color changing on hour
+// function nineColor() {
+//     var startDay = moment().startOf('day');
+//     if (currentTime.isAfter(startDay)) {
+//         $('#nineText').addClass("past");
+//     }
+//     else if (currentTime.isBefore(startDay)) {
+//         $('#nineText').addClass("future");
+//     }
+//     else if (currentTime.isSame(startDay)) {
+//         $('#nineText').addClass("present");
+//     }
+// };
+// nineColor();
 
 
 
