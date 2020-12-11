@@ -51,6 +51,6 @@ THEN the saved events persist
 https://sawi4644.github.io/schedule-organizer/
 
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+![planner demo](/assets/first.png)
 
 
