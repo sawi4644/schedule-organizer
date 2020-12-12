@@ -52,5 +52,6 @@ https://sawi4644.github.io/schedule-organizer/
 
 
 ![planner demo](/assets/first.png)
+![planner demo with colors](/assets/second.png)
 
 
